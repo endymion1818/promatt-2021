@@ -21,6 +21,7 @@
     <nav
       class="lg:mr-0 sm:ml-auto sm:mr-auto flex flex-wrap flex-col items-start text-base justify-center"
     >
+      <a href="/" class="mr-3 p-2 hover:text-gray-900">Home</a>  
       <a href="/about" class="mr-5 p-2 hover:text-gray-900">About</a>
       <a href="/services" class="mr-5 p-2 hover:text-gray-900">Services</a>
       <a href="/gallery" class="mr-5 p-2 hover:text-gray-900">Gallery</a>
