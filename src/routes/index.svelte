@@ -1,5 +1,8 @@
 <script context="module">
   import { gql, GraphQLClient } from 'graphql-request'
+  import Hammer from '../lib/promatt-homecircle-hammer.png'
+  import House from '../lib/promatt-homecircle-house.png'
+  import Spyglass from '../lib/promatt-homecircle-spyglass.png'
 
   export async function load() {
     const graphcms = new GraphQLClient(
@@ -46,9 +49,14 @@
   <title>SvelteKit starter blog</title>
 </svelte:head>
 
-<section class="text-gray-600 body-font overflow-hidden">
-  <div class="container mx-auto">
-    <div class="grid grid-flow-col gap-2">
+<div class="text-gray-600 body-font overflow-hidden">
+  <section class="container mx-auto py-20 text-center">
+    <hr/>
+    <h1 class="text-5xl">Making wood work for you</h1>
+    <hr/>
+  </section>
+  <section class="container mx-auto">
+    <div class="grid md:grid-flow-col gap-2">
       {#each galleries as gallery}
         <div
           class="p-12 flex flex-col items-start w-full border rounded-xl shadow-xl bg-white"
@@ -94,5 +102,27 @@
         </div>
       {/each}
     </div>
-  </div>
-</section>
+  </section>
+  <section class="container mx-auto py-20 text-center">
+    <h2 class="text-5xl">Furniture hand crafted in my mobile workshop</h2>
+    <hr/>
+    <p class="text-3xl">using traditional and modern jointing and construction techniques.</p>
+  </section>
+  <section class="container mx-auto pb-20 text-center">
+      <img src={Spyglass} alt="a spyglass" width="192" height="192" class="mx-auto mb-4">
+      <div class="mb-8 max-w-xs mx-auto">
+        <h3 class="text-2xl mb-1">Sourcing</h3>
+        <p>Finding and purchasing the raw materials at the best possible prices.</p>
+      </div>
+      <img src={Hammer} alt="a hammer" width="192" height="192" class="mx-auto mb-4">
+      <div class="mb-8 max-w-xs mx-auto">
+        <h3 class="text-2xl mb-1">Crafting</h3>
+        <p>Many of my clients have simply produced a picture from a magazine or off the internet and I work to that, producing my own plans and working out the structural design. Once the plan is complete I can start construction and crafting.</p>
+      </div>
+      <img src={House} alt="a house" width="192" height="192" class="mx-auto mb-4">
+      <div class="mb-8 max-w-xs mx-auto">
+        <h3 class="text-2xl mb-1">Installation</h3>
+        <p>I prefer to make things on site as I can refer to the space the item will be taking and also closer communication with the client.</p>
+      </div>
+  </section>
+</div>

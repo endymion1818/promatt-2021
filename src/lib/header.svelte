@@ -4,7 +4,7 @@
 
 <header class="text-gray-600 body-font mb-10">
   <div
-    class="container mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center"
+    class="container max-w-3xl mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center"
   >
     <a
       href="/"

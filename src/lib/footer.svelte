@@ -2,9 +2,9 @@
   import LogoIcon from './logo-icon.svelte'
 </script>
 
-<footer class="text-gray-600 body-font mb-10">
+<footer class="text-yellow-100 pb-10">
   <div
-    class="container mx-auto flex flex-wrap py-5 flex-row items-center"
+    class="container mx-auto max-w-3xl flex flex-wrap py-5 flex-row items-center"
   >
     <div class="flex flex-row items-center">
         <a
@@ -21,11 +21,11 @@
     <nav
       class="lg:mr-0 sm:ml-auto sm:mr-auto flex flex-wrap flex-col items-start text-base justify-center"
     >
-      <a href="/" class="mr-3 p-2 hover:text-gray-900">Home</a>  
-      <a href="/about" class="mr-5 p-2 hover:text-gray-900">About</a>
-      <a href="/services" class="mr-5 p-2 hover:text-gray-900">Services</a>
-      <a href="/gallery" class="mr-5 p-2 hover:text-gray-900">Gallery</a>
-      <a href="/contact" class="mr-5 p-2 hover:text-gray-900">Contact</a>
+      <a href="/" class="mr-3 p-2 hover:text-white">Home</a>  
+      <a href="/about" class="mr-5 p-2 hover:text-white">About</a>
+      <a href="/services" class="mr-5 p-2 hover:text-white">Services</a>
+      <a href="/gallery" class="mr-5 p-2 hover:text-white">Gallery</a>
+      <a href="/contact" class="mr-5 p-2 hover:text-white">Contact</a>
     </nav>
   </div>
 </footer>

@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Domine', Georgia, 'Times New Roman', Times, serif;
-  background-image: url(./background.png);
+  background-image: url(./lib/background.png);
 }
 
 .markdown {

@@ -4,8 +4,10 @@
   import '../app.css'
 </script>
 
+<Header />
 <div class="container max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-  <Header />
   <slot />
+</div>
+<div class="bg-gray-900 px-4 sm:px-6 lg:px-8">
   <Footer/>
 </div>
