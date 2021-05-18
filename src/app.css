@@ -9,6 +9,11 @@
 body {
   font-family: 'Domine', Georgia, 'Times New Roman', Times, serif;
   background-image: url(./lib/background.png);
+  color: #3f382e;
+}
+
+h1, h2, h3, h4, h5, h6, a, p {
+  color: #3f382e;
 }
 
 .markdown {

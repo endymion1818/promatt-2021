@@ -49,7 +49,7 @@
   <title>SvelteKit starter blog</title>
 </svelte:head>
 
-<div class="text-gray-600 body-font overflow-hidden">
+<div class="body-font overflow-hidden">
   <section class="container mx-auto py-20 text-center">
     <hr/>
     <h1 class="text-5xl">Making wood work for you</h1>
@@ -62,7 +62,7 @@
           class="p-12 flex flex-col items-start w-full border rounded-xl shadow-xl bg-white"
         >
           <h2
-            class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4"
+            class="sm:text-3xl text-2xl title-font font-medium mt-4 mb-4"
           >
             {gallery.title}
           </h2>

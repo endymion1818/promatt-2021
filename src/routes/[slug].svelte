@@ -64,19 +64,19 @@
   <title>{page.title}</title>
 </svelte:head>
 
-<h1 class="text-4xl title-font font-semibold text-gray-900 mb-2">
+<h1 class="text-4xl title-font font-semibold mb-2">
   {page.title}
 </h1>
 <main class="markdown">
   {@html page.content.html}
-    <section class="container mx-auto">
+    <section class="container mx-auto mb-8">
       <div class="grid md:grid-flow-col gap-2">
         {#each galleries as gallery}
           <div
             class="p-12 flex flex-col items-start w-full border rounded-xl shadow-xl bg-white"
           >
             <h2
-              class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4"
+              class="sm:text-3xl text-2xl title-font font-medium mt-4 mb-4"
             >
               {gallery.title}
             </h2>

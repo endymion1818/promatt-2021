@@ -8,6 +8,6 @@
 <div class="container max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
   <slot />
 </div>
-<div class="bg-gray-900 px-4 sm:px-6 lg:px-8">
+<div class="bg-current px-4 sm:px-6 lg:px-8">
   <Footer/>
 </div>
