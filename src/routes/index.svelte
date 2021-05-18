@@ -48,10 +48,10 @@
 
 <section class="text-gray-600 body-font overflow-hidden">
   <div class="container mx-auto">
-    <div class="flex flex-wrap">
+    <div class="grid grid-flow-col gap-2">
       {#each galleries as gallery}
         <div
-          class="p-12 mb-10 flex flex-col items-start w-full border rounded-xl shadow-xl"
+          class="p-12 flex flex-col items-start w-full border rounded-xl shadow-xl bg-white"
         >
           <h2
             class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4"
