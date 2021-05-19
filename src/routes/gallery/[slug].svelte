@@ -47,7 +47,7 @@
 </script>
 
 <svelte:head>
-  <title>{gallery.title}</title>
+  <title>{gallery.title} - Promatt camper van conversions and bespoke carpentry</title>
   <meta name="description" content={gallery.description}>
   <meta property="og:title" content={gallery.title}>
   <meta property="og:type" content="website">

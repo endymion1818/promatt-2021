@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* purgecss start ignore */
-/* Markdown Styles */
+/* main Styles */
 /* Global */
 
 body {
@@ -16,90 +16,91 @@ h1, h2, h3, h4, h5, h6, a, p {
   color: #3f382e;
 }
 
-.markdown {
+#main {
   @apply leading-relaxed text-sm;
 }
 
 @screen sm {
-  .markdown {
+  #main {
     @apply text-base;
   }
 }
 
 @screen lg {
-  .markdown {
+  #main {
+    min-height: 40vh;
     @apply text-lg;
   }
 }
 
 /* Headers */
-.markdown h1,
-.markdown h2 {
+#main h1,
+#main h2 {
   @apply text-xl my-6 font-semibold;
 }
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6 {
+#main h3,
+#main h4,
+#main h5,
+#main h6 {
   @apply text-lg my-3 font-semibold;
 }
 
 @screen sm {
-  .markdown h1,
-  .markdown h2 {
+  #main h1,
+  #main h2 {
     @apply text-2xl;
   }
-  .markdown h3,
-  .markdown h4,
-  .markdown h5,
-  .markdown h6 {
+  #main h3,
+  #main h4,
+  #main h5,
+  #main h6 {
     @apply text-xl;
   }
 }
 
 /* Links */
-.markdown a {
+#main a {
   @apply text-blue-600;
 }
-.markdown a:hover {
+#main a:hover {
   @apply underline;
 }
 /* Paragraph */
-.markdown p {
+#main p {
   @apply mb-4;
 }
 /* Lists */
-.markdown ul,
-.markdown ol {
+#main ul,
+#main ol {
   @apply mb-4 ml-8;
 }
-.markdown li > p,
-.markdown li > ul,
-.markdown li > ol {
+#main li > p,
+#main li > ul,
+#main li > ol {
   @apply mb-0;
 }
-.markdown ol {
+#main ol {
   @apply list-decimal;
 }
-.markdown ul {
+#main ul {
   @apply list-disc;
 }
 /* Blockquotes */
-.markdown blockquote {
+#main blockquote {
   @apply p-2 mx-6 bg-gray-100 mb-4 border-l-4 border-gray-400 italic;
 }
-.markdown blockquote > p {
+#main blockquote > p {
   @apply mb-0;
 }
 /* Tables */
-.markdown td,
-.markdown th {
+#main td,
+#main th {
   @apply px-2 py-1 border border-gray-400;
 }
-.markdown tr:nth-child(odd) {
+#main tr:nth-child(odd) {
   @apply bg-gray-100;
 }
-.markdown table {
+#main table {
   @apply mb-6;
 }
 
@@ -107,7 +108,7 @@ h1, h2, h3, h4, h5, h6, a, p {
    the setting for codeblocks (inside ```), which are rendered in as:
    <pre><code>...
 */
-.markdown :not(pre) > code.language-text {
+#main :not(pre) > code.language-text {
   white-space: pre-line;
 }
 /* purgecss end ignore */

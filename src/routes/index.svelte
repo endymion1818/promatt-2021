@@ -3,7 +3,9 @@
   import Hammer from '../lib/promatt-homecircle-hammer.png'
   import House from '../lib/promatt-homecircle-house.png'
   import Spyglass from '../lib/promatt-homecircle-spyglass.png'
-
+  import OgImg from '../lib/og-image.jpg'
+  import Icon from '../lib/icon.png'
+  
   export async function load() {
     const graphcms = new GraphQLClient(
       import.meta.env.VITE_GRAPHCMS_URL,
@@ -43,10 +45,20 @@
 
 <script>
   export let galleries
+  let title = "Promatt camper van conversions and bespoke carpentry"
+  let description = "Furniture hand crafted in my mobile workshop, using traditional and modern jointing and construction techniques."
 </script>
 
 <svelte:head>
-  <title>SvelteKit starter blog</title>
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <meta property="og:title" content={title}>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/">
+  <meta property="og:image" content={OgImg}>
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href={Icon}>
+  <meta name="theme-color" content="#fafafa">
 </svelte:head>
 
 <div class="body-font overflow-hidden">

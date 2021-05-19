@@ -64,7 +64,7 @@
 </script>
 
 <svelte:head>
-  <title>{page.title}</title>
+  <title>{page.title} - Promatt camper van conversions and bespoke carpentry</title>
   <meta name="description" content={page.description}>
   <meta property="og:title" content={page.title}>
   <meta property="og:type" content="website">
@@ -78,7 +78,7 @@
 <h1 class="text-4xl title-font font-semibold mb-2">
   {page.title}
 </h1>
-<main class="markdown">
+<main id="main">
   {@html page.content.html}
   {#if (page.slug === 'gallery')}
     <section class="container mx-auto mb-8">
