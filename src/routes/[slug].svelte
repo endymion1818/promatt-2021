@@ -1,5 +1,7 @@
 <script context="module">
   import { gql, GraphQLClient } from 'graphql-request'
+  import OgImg from '../lib/og-image.jpg'
+  import Icon from '../lib/icon.png'
 
   export async function load(context) {
     const graphcms = new GraphQLClient(
@@ -49,7 +51,8 @@
     return {
       props: {
         page,
-        galleries
+        galleries,
+        currentUrl: page.path
       },
     }
   }
@@ -62,6 +65,14 @@
 
 <svelte:head>
   <title>{page.title}</title>
+  <meta name="description" content={page.description}>
+  <meta property="og:title" content={page.title}>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={page.slug}>
+  <meta property="og:image" content={OgImg}>
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href={Icon}>
+  <meta name="theme-color" content="#fafafa">
 </svelte:head>
 
 <h1 class="text-4xl title-font font-semibold mb-2">
@@ -70,6 +81,7 @@
 <main class="markdown">
   {@html page.content.html}
     <section class="container mx-auto mb-8">
+      {#if (page.slug === 'gallery')}
       <div class="grid md:grid-flow-col gap-2">
         {#each galleries as gallery}
           <div
@@ -96,7 +108,7 @@
               class="flex items-center flex-wrap mb-4 mt-auto w-full"
             >
               <a
-                href="{gallery.slug}"
+                href={`/gallery/${gallery.slug}`}
                 class="text-indigo-500 inline-flex items-center mt-2"
                 >Learn More
                 <svg
@@ -116,5 +128,6 @@
           </div>
         {/each}
       </div>
+      {/if}
     </section>
 </main>

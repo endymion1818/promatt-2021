@@ -1,5 +1,7 @@
 <script context="module">
   import { gql, GraphQLClient } from 'graphql-request'
+  import OgImg from '../../lib/og-image.jpg'
+  import Icon from '../../lib/icon.png'
 
   export async function load(context) {
     const graphcms = new GraphQLClient(
@@ -14,8 +16,11 @@
         gallery(where: { slug: $slug }) {
           id
           title
+          slug
           description
-          introduction
+          introduction {
+            html
+          }
           featuredImage {
             id
           }
@@ -43,26 +48,20 @@
 
 <svelte:head>
   <title>{gallery.title}</title>
+  <meta name="description" content={gallery.description}>
+  <meta property="og:title" content={gallery.title}>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={gallery.slug}>
+  <meta property="og:image" content={OgImg}>
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href={Icon}>
+  <meta name="theme-color" content="#fafafa">
 </svelte:head>
 
 <h1 class="text-4xl title-font font-semibold text-gray-900 mb-2">
   {gallery.title}
 </h1>
-<a href="/" class="inline-flex items-center mb-6">
-  <img
-    alt="blog"
-    src="https://dummyimage.com/104x104"
-    class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
-  />
-  <span class="flex-grow flex flex-col pl-4">
-    <span class="title-font font-medium text-gray-900"
-      >{gallery.author.name}</span
-    >
-    <span class="text-gray-400 text-xs tracking-widest mt-0.5"
-      >{gallery.author.title}</span
-    >
-  </span>
-</a>
+
 <div class="mb-6 flex justify-between">
   <div>
     {#if gallery.tags}
@@ -74,9 +73,6 @@
       {/each}
     {/if}
   </div>
-  <p class="text-gray-400 text-xs tracking-widest mt-0.5">
-    {new Date(gallery.date).toDateString()}
-  </p>
 </div>
 <main class="markdown">
   {@html gallery.introduction.html}
