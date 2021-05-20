@@ -131,4 +131,18 @@
         </div>
       </section>
       {/if}
+      {#if (page.slug === 'contact')}
+      <form class="max-w-xs mb-4" id="contactform" action="https://formspree.io/f/maylrkjb" method="POST">
+        <div class="flex flex-col mb-2">
+          <label for="email">Your email</label>
+          <input type="email" id="email" name="_replyto"  class="border-2 border-gray-500 rounded " required>
+        </div>
+        <div class="flex flex-col mb-2">
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" class="border-2 border-gray-500 rounded " rows="4"></textarea>
+        </div>
+        <br><br>
+        <button class="btn p-2 border-2 border-gray-500 rounded hover:bg-current"  type="submit">Send</button>
+    </form>
+      {/if}
 </main>
