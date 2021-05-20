@@ -18,11 +18,24 @@
           title
           slug
           description
-          introduction {
+          body {
             html
           }
-          featuredImage {
+          showcaseVideo {
             id
+            url
+            height
+            width
+          }
+          thumbImg: galleryItems {
+            id
+            url(
+              transformation: {
+                image: { resize: { width: 1000, fit: clip } }
+              }
+            )
+            height
+            width
           }
         }
       }
@@ -61,19 +74,23 @@
 <h1 class="text-4xl title-font font-semibold text-gray-900 mb-2">
   {gallery.title}
 </h1>
-
 <div class="mb-6 flex justify-between">
-  <div>
-    {#if gallery.tags}
-      {#each gallery.tags as tag}
-        <span
-          class="py-1 px-2 mr-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest"
-          >{tag}</span
-        >
-      {/each}
+  <main id="main">
+    {@html gallery.body.html}
+    {#if gallery.showcaseVideo}
+    <div class="p-12 mb-8 w-full border rounded-xl shadow-xl bg-white">
+      <!-- svelte-ignore a11y-media-has-caption -->
+      <video controls class="mx-auto" src={gallery.showcaseVideo.url} alt={`gallery ${gallery.title} featured content`} width={gallery.showcaseVideo.width} height={gallery.showcaseVideo.height} />
+    </div>
     {/if}
-  </div>
+    <div class="grid md:grid-cols-2 gap-2">
+      {#if gallery.thumbImg}
+        {#each gallery.thumbImg as galleryItem}
+          <div class="p-12 flex flex-col w-full justify-center border rounded-xl shadow-xl bg-white">
+            <a href={galleryItem.url}><img src={galleryItem.url} height={galleryItem.height} width={galleryItem.width} alt='gallery item'/></a>
+          </div>  
+        {/each}
+      {/if}
+    </div>
+  </main>
 </div>
-<main class="markdown">
-  {@html gallery.introduction.html}
-</main>

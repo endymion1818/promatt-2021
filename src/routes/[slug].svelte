@@ -29,6 +29,7 @@
           id
           title
           description
+          slug
           featuredImage {
             id
             width
