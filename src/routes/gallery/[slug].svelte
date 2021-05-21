@@ -26,6 +26,7 @@
             url
             height
             width
+            alt
           }
           thumbImg: galleryItems {
             id
@@ -36,6 +37,7 @@
             )
             height
             width
+            alt
           }
         }
       }
@@ -80,14 +82,14 @@
     {#if gallery.showcaseVideo}
     <div class="p-12 mb-8 w-full border rounded-xl shadow-xl bg-white">
       <!-- svelte-ignore a11y-media-has-caption -->
-      <video controls class="mx-auto" src={gallery.showcaseVideo.url} alt={`gallery ${gallery.title} featured content`} width={gallery.showcaseVideo.width} height={gallery.showcaseVideo.height} />
+      <video controls class="mx-auto" src={gallery.showcaseVideo.url} alt={`gallery ${gallery.title} featured content`} width={gallery.showcaseVideo.width} height={gallery.showcaseVideo.height} caption={gallery.showcaseVideo.alt} type="text"/>
     </div>
     {/if}
     <div class="grid md:grid-cols-2 gap-2">
       {#if gallery.thumbImg}
         {#each gallery.thumbImg as galleryItem}
           <div class="p-12 flex flex-col w-full justify-center border rounded-xl shadow-xl bg-white">
-            <a href={galleryItem.url}><img src={galleryItem.url} height={galleryItem.height} width={galleryItem.width} alt='gallery item'/></a>
+            <a href={galleryItem.url}><img src={galleryItem.url} height={galleryItem.height} width={galleryItem.width} alt={galleryItem.alt}/></a>
           </div>  
         {/each}
       {/if}

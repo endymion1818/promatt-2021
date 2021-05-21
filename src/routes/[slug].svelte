@@ -21,9 +21,6 @@
           content {
             html
           }
-          featuredImage {
-            id
-          }
         }
         galleries {
           id
@@ -35,6 +32,7 @@
             width
             height
             url
+            alt
           }
           galleryItems {
             id
@@ -98,7 +96,7 @@
                 </p>
                 <a href={`/gallery/${gallery.slug}`} class="inline-flex items-center">
                   <img
-                    alt={`Preview image for gallery ${gallery.title}`}
+                    alt={gallery.featuredImage.alt}
                     src={gallery.featuredImage.url}
                     width={gallery.featuredImage.width}
                     height={gallery.featuredImage.height}
