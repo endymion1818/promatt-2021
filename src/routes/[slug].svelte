@@ -34,7 +34,11 @@
             id
             width
             height
-            url
+            url(
+              transformation: {
+                image: { resize: { width: 650, height: 650, fit: clip } }
+              }
+            )
           }
           galleryItems {
             id

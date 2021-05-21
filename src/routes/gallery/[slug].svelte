@@ -65,7 +65,7 @@
   <meta property="og:title" content={gallery.title}>
   <meta property="og:type" content="website">
   <meta property="og:url" content={gallery.slug}>
-  <meta property="og:image" content={OgImg}>
+  <meta property="og:image" content={gallery.gallery.thumbImg[0].url}>
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href={Icon}>
   <meta name="theme-color" content="#fafafa">
