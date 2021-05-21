@@ -81,15 +81,17 @@
           <p class="leading-relaxed mb-8">
             {gallery.description}
           </p>
-          <a href={`/gallery/${gallery.slug}`} class="inline-flex items-center">
-            <img
-              alt={`Preview image for gallery ${gallery.title}`}
-              src={gallery.featuredImage.url}
-              width={gallery.featuredImage.width}
-              height={gallery.featuredImage.height}
-              class="h-120 flex-shrink-0 object-cover object-center"
-            />
-          </a>
+          {#if gallery.featuredImage}
+            <a href={`/gallery/${gallery.slug}`} class="inline-flex items-center">
+              <img
+                alt={`Preview image for gallery ${gallery.title}`}
+                src={gallery.featuredImage.url}
+                width={gallery.featuredImage.width}
+                height={gallery.featuredImage.height}
+                class="h-120 flex-shrink-0 object-cover object-center"
+              />
+            </a>
+          {/if}
           <div
             class="flex items-center flex-wrap mb-4 mt-auto w-full"
           >
