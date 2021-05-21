@@ -16,7 +16,7 @@
 
     const query = gql`
       query Galleries {
-        galleries {
+        galleries(first:4) {
           id
           title
           description
