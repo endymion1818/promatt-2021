@@ -68,7 +68,7 @@
     <hr/>
   </section>
   <section class="container mx-auto">
-    <div class="grid md:grid-flow-col gap-2">
+    <div class="grid md:grid-cols-2 gap-2">
       {#each galleries as gallery}
         <div
           class="p-12 flex flex-col items-start w-full border rounded-xl shadow-xl bg-white"
