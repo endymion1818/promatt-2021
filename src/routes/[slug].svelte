@@ -31,16 +31,11 @@
             id
             width
             height
-<<<<<<< HEAD
-            url
-            alt
-=======
             url(
               transformation: {
                 image: { resize: { width: 650, height: 650, fit: clip } }
               }
             )
->>>>>>> 51cddf5a01a8bf8a3301f7eb1e30dd41abab9171
           }
           galleryItems {
             id
@@ -102,17 +97,6 @@
                 <p class="leading-relaxed mb-8">
                   {gallery.description}
                 </p>
-<<<<<<< HEAD
-                <a href={`/gallery/${gallery.slug}`} class="inline-flex items-center">
-                  <img
-                    alt={gallery.featuredImage.alt}
-                    src={gallery.featuredImage.url}
-                    width={gallery.featuredImage.width}
-                    height={gallery.featuredImage.height}
-                    class="h-120 flex-shrink-0 object-cover object-center"
-                  />
-                </a>
-=======
                 {#if gallery.featuredImage}
                   <a href={`/gallery/${gallery.slug}`} class="inline-flex items-center">
                     <img
@@ -124,7 +108,6 @@
                     />
                   </a>
                 {/if}
->>>>>>> 51cddf5a01a8bf8a3301f7eb1e30dd41abab9171
                 <div
                   class="flex items-center flex-wrap mb-4 mt-auto w-full"
                 >
