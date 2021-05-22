@@ -29,6 +29,7 @@
           slug
           featuredImage {
             id
+            alt
             width
             height
             url(
@@ -100,7 +101,7 @@
                 {#if gallery.featuredImage}
                   <a href={`/gallery/${gallery.slug}`} class="inline-flex items-center">
                     <img
-                      alt={`Preview image for gallery ${gallery.title}`}
+                      alt={gallery.featuredImage.alt}
                       src={gallery.featuredImage.url}
                       width={gallery.featuredImage.width}
                       height={gallery.featuredImage.height}

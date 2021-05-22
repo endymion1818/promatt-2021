@@ -89,7 +89,9 @@
       {#if gallery.galleryItems}
         {#each gallery.galleryItems as galleryItem}
           <div class="p-12 flex flex-col w-full justify-center border rounded-xl shadow-xl bg-white">
-            <a href={galleryItem.url}><img src={galleryItem.url} height={galleryItem.height} width={galleryItem.width} alt={galleryItem.alt}/></a>
+            <a href={galleryItem.url}>
+              <img src={galleryItem.url} height={galleryItem.height} width={galleryItem.width} alt={galleryItem.alt}/>
+            </a>
           </div>  
         {/each}
       {/if}
