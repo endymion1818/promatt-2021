@@ -27,7 +27,7 @@
             height
             width
           }
-          thumbImg: galleryItems {
+          galleryItems {
             id
             url(
               transformation: {
@@ -65,7 +65,7 @@
   <meta property="og:title" content={gallery.title}>
   <meta property="og:type" content="website">
   <meta property="og:url" content={gallery.slug}>
-  <meta property="og:image" content={gallery.gallery.thumbImg[0].url}>
+  <meta property="og:image" content={gallery.galleryItems[0].url}>
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href={Icon}>
   <meta name="theme-color" content="#fafafa">
@@ -84,8 +84,8 @@
     </div>
     {/if}
     <div class="grid md:grid-cols-2 gap-2">
-      {#if gallery.thumbImg}
-        {#each gallery.thumbImg as galleryItem}
+      {#if gallery.galleryItems}
+        {#each gallery.galleryItems as galleryItem}
           <div class="p-12 flex flex-col w-full justify-center border rounded-xl shadow-xl bg-white">
             <a href={galleryItem.url}><img src={galleryItem.url} height={galleryItem.height} width={galleryItem.width} alt='gallery item'/></a>
           </div>  
