@@ -17,6 +17,7 @@
     const query = gql`
       query Galleries {
         galleries(first:4) {
+          slug
           id
           title
           description
