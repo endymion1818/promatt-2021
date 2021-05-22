@@ -138,7 +138,7 @@
       </section>
       {/if}
       {#if (page.slug === 'contact')}
-      <form class="max-w-xs mb-4" id="contactform" action="https://formspree.io/f/maylrkjb" method="POST">
+      <form class="max-w-xs mb-4" id="contactform" action="https://formspree.io/f/mpzkpgqr" method="POST">
         <div class="flex flex-col mb-2">
           <label for="email">Your email</label>
           <input type="email" id="email" name="_replyto"  class="border-2 border-gray-500 rounded " required>
