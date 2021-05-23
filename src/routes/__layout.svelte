@@ -4,11 +4,6 @@
   import '../app.css'
 </script>
 
-<script context="module">
-	export const hydrate = false;
-  export const router = false;
-</script>
-
 <Header />
 <div class="container max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
   <slot />
