@@ -22,6 +22,7 @@
           title
           description
           featuredImage {
+            alt
             id
             width
             height
@@ -30,9 +31,6 @@
                 image: { resize: { width: 650, height: 650, fit: clip } }
               }
             )
-          }
-          galleryItems {
-            id
           }
         }
       }
