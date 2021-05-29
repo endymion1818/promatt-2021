@@ -78,7 +78,9 @@
 </h1>
 <div class="mb-6 flex justify-between">
   <main id="main">
-    {@html gallery.body.html}
+    {#if gallery.body.html}
+      {@html gallery.body.html}
+    {/if}
     {#if gallery.showcaseVideo}
     <div class="p-12 mb-8 w-full border rounded-xl shadow-xl bg-white">
       <!-- svelte-ignore a11y-media-has-caption -->
