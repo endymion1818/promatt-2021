@@ -22,7 +22,7 @@
             html
           }
         }
-        galleries {
+        galleries(orderBy: updatedAt_ASC) {
           id
           title
           description
