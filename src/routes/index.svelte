@@ -99,7 +99,7 @@
             class="flex items-center flex-wrap mb-4 mt-auto w-full"
           >
             <a
-              href="{gallery.slug}"
+              href={`/gallery/${gallery.slug}`}
               class="text-indigo-500 inline-flex items-center mt-2"
               >Learn More
               <svg
