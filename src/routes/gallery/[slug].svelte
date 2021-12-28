@@ -72,13 +72,12 @@
   <link rel="apple-touch-icon" href={Icon}>
   <meta name="theme-color" content="#fafafa">
 </svelte:head>
-
-<h1 class="text-4xl title-font font-semibold text-gray-900 mb-2">
-  {gallery.title}
-</h1>
+  <h1 class="text-4xl title-font font-semibold text-gray-900 mb-2">
+    {gallery.title}
+  </h1>
 <div class="mb-6 flex justify-between">
   <main id="main">
-    {#if gallery.body.html}
+    {#if gallery.body}
       {@html gallery.body.html}
     {/if}
     {#if gallery.showcaseVideo}
